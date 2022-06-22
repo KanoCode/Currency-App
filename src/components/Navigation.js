@@ -1,6 +1,6 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
+import { MdSearch } from 'react-icons/md';
 import { useSelector } from 'react-redux';
 import StockCard from './stockCard';
 
@@ -11,6 +11,14 @@ export default function Navigation() {
   return (
 
     <div className="container">
+      <form className="p-1 my-3">
+        <label htmlFor="search">
+          <input placeholder="company search" id="search" />
+          {' '}
+          <MdSearch />
+          {' '}
+        </label>
+      </form>
 
       {stockData.map((a) => {
         console.log(a);

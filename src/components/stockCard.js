@@ -7,13 +7,20 @@ const StockCard = (props) => {
   } = props;
 
   return (
-    <div className="stock-card">
+    <div className="stock-card p-2 rounded">
       <img src={img(symbol)} alt="" />
-      <div>
+      <div className="cpny-details">
         {' '}
-        <h4>{name}</h4>
-        <h5>{symbol}</h5>
-        <span>{price}</span>
+        <h4>{symbol}</h4>
+        <h5>{name}</h5>
+      </div>
+      <div className="price-data">
+        {' '}
+        <p>
+          $
+          {price}
+        </p>
+        <span>+334%</span>
       </div>
     </div>
   );
