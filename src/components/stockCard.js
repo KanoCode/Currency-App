@@ -5,7 +5,6 @@ const StockCard = (props) => {
   const {
     img, symbol, price, name,
   } = props;
-  console.log(props, img('FB'));
 
   return (
     <div className="stock-card">

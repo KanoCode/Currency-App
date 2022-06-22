@@ -39,7 +39,10 @@ header {
   /* flex-wrap: wrap; */
 }
 .stock-card img {
-  /* border: solid; */
   width: 40%;
-  /* border-radius: 50%; */
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
 }

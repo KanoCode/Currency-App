@@ -1,35 +1,22 @@
 import './styles/App.css';
 import { FaMicrophone } from 'react-icons/fa';
 import { IoMdSettings } from 'react-icons/io';
-import { useSelector } from 'react-redux';
-import StockCard from './components/stockCard';
+import { Routes, Route } from 'react-router-dom';
+import Navigation from './components/Navigation';
+import Profile from './pages/profile';
 
 function App() {
-  const stockData = useSelector((state) => state.stocks);
-  const imgUrlGenerator = (code) => `https://financialmodelingprep.com/image-stock/${code}.png`;
-  console.log(stockData);
   return (
     <div className="App">
       <header className="App-header">
-        Hi i am a header
+
         <FaMicrophone />
         <IoMdSettings />
       </header>
-
-      <div className="container">
-        {stockData.map((a) => {
-          console.log(a);
-          return (
-            <StockCard
-              name={a.name}
-              symbol={a.symbol}
-              key={1}
-              img={imgUrlGenerator}
-              price={a.price}
-            />
-          );
-        })}
-      </div>
+      <Routes>
+        <Route path="/" element={<Navigation />} />
+        <Route path="/profile" element={<Profile />} />
+      </Routes>
     </div>
   );
 }
