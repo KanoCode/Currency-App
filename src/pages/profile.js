@@ -2,21 +2,23 @@ import React from 'react';
 import '../styles/Profile.css';
 import { useLocation, Link } from 'react-router-dom';
 import { FaHouseUser } from 'react-icons/fa';
-import { UserData } from '../components/Data';
+import { useSelector } from 'react-redux';
 import LineChart from '../components/LineChart';
 
 function Profile(props) {
   console.log(props);
+  const UserData = useSelector((state) => state.profile);
+  console.log(UserData);
   const location = useLocation();
   const { symbol } = location.state;
   console.log(symbol);
   const Data = {
-    labels: UserData.map((data) => data.year),
+    labels: UserData.map((data) => data.datetime),
     datasets: [
       {
         fill: true,
-        label: 'Users Gained',
-        data: UserData.map((data) => data.userGain),
+        label: 'Volume per day',
+        data: UserData.map((data) => data.volume),
         backgroundColor: [
           // You add here colors that corresponds to how many labels you have
           'rgba(75,192,192,1)',
@@ -71,15 +73,15 @@ function Profile(props) {
           <span>Day Low</span>
           <h5>
             $
-            {2324}
+            {parseInt(UserData[0].open, 10)}
           </h5>
           <h5>
             $
-            {2324}
+            {parseInt(UserData[0].high, 10)}
           </h5>
           <h5>
             $
-            {2324}
+            {parseInt(UserData[0].low, 10)}
           </h5>
         </div>
       </div>

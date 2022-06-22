@@ -183,6 +183,7 @@ export default function Navigation() {
                 symbol={a.symbol}
                 img={imgUrlGenerator}
                 price={a.price}
+                indicator={a.beta}
               />
             </NavLink>
           );

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const StockCard = (props) => {
   const {
-    img, symbol, price, name,
+    img, symbol, price, name, indicator,
   } = props;
 
   return (
@@ -20,7 +20,10 @@ const StockCard = (props) => {
           $
           {price}
         </p>
-        <span>+334%</span>
+        <span className={indicator >= 1 ? 'text-success' : 'text-warning'}>
+          {indicator >= 1 ? `+${indicator}` : `-${indicator}`}
+          %
+        </span>
       </div>
     </div>
   );
@@ -31,5 +34,6 @@ StockCard.propTypes = {
   symbol: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
+  indicator: PropTypes.number.isRequired,
 };
 export default StockCard;
