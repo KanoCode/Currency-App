@@ -1,0 +1,30 @@
+#profile-header a{
+color: darkgray;
+padding-left: 34%;
+}
+.card-body-top{
+    border-bottom:1px solid grey;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.icon-container{
+    display: flex;
+    align-items: center;
+}
+.price-data{
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.card-body-bottom{
+    display:grid;
+    grid-template-columns: auto auto auto;
+}
+.card-body-bottom span{
+    color: grey;
+}
+.percentage-price{
+    color:#6AAF9F;
+}
