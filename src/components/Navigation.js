@@ -6,10 +6,11 @@ import { BsGraphUp } from 'react-icons/bs';
 import { FaMicrophone } from 'react-icons/fa';
 import { IoMdSettings } from 'react-icons/io';
 import StockCard from './stockCard';
+import { imgUrlGenerator as generateIcon } from './Utils/API';
 
 export default function Navigation() {
   const stockData = useSelector((state) => state.stocks);
-  const imgUrlGenerator = (code) => `https://financialmodelingprep.com/image-stock/${code}.png`;
+  generateIcon();
 
   return (
     <>
@@ -181,7 +182,7 @@ export default function Navigation() {
               <StockCard
                 name={a.name}
                 symbol={a.symbol}
-                img={imgUrlGenerator}
+                img={generateIcon}
                 price={a.price}
                 indicator={a.beta}
               />
