@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../styles/Profile.css';
 import { useLocation, Link } from 'react-router-dom';
 import { FaHouseUser } from 'react-icons/fa';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import LineChart from '../components/LineChart';
-// import getProfileData from '../redux/actions/Profle-action';
+import getProfileData from '../redux/actions/Profle-action';
 
 const getChartData = (arr) => ({
   labels: arr.map((data) => data.datetime),
@@ -40,13 +40,15 @@ const getChartData = (arr) => ({
 function Profile(props) {
   const location = useLocation();
   const { symbol } = location.state;
-  // const Dispatch = useDispatch();
-  // useEffect(() => {
-  //   Dispatch(getProfileData(symbol));
-  // }, []);
+  const Dispatch = useDispatch();
+  useEffect(() => {
+    Dispatch(getProfileData(symbol));
+  }, []);
   console.log(props, symbol);
   const UserData = useSelector((state) => state.profile.chartData);
   const {
+    price,
+    beta,
     image,
     companyName,
     ceo,
@@ -86,13 +88,11 @@ function Profile(props) {
           <div className="price-data d-flex flex-column">
             <span>
               $
-              {23}
-              ,
-              {32}
+              {price}
             </span>
             <span className="percentage-price">
               (+
-              {0.38}
+              {beta}
               %)
             </span>
           </div>

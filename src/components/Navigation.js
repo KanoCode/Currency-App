@@ -1,17 +1,37 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { MdSearch, MdOutlineSouthEast, MdNorthEast } from 'react-icons/md';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { BsGraphUp } from 'react-icons/bs';
 import { FaMicrophone } from 'react-icons/fa';
 import { IoMdSettings } from 'react-icons/io';
 import StockCard from './stockCard';
+import fetchStocksData from '../redux/actions/fetchActions';
+import searchData from '../redux/actions/search-action';
 import { imgUrlGenerator as generateIcon } from './Utils/API';
 
 export default function Navigation() {
   const stockData = useSelector((state) => state.stocks);
-  generateIcon();
+  const [query, setQuery] = useState('');
+  const Dispatch = useDispatch();
 
+  generateIcon();
+  const handleSearch = (event) => {
+    event.preventDefault();
+    console.log(query);
+    Dispatch(searchData(query));
+  };
+  useEffect(() => {
+    Dispatch(fetchStocksData());
+    if (stockData.length === 0) {
+      fetchStocksData();
+    }
+  },
+  []);
+
+  const onChangeHandler = (event) => {
+    setQuery(event.target.value);
+  };
   return (
     <>
       <header className="App-header d-flex align-items-center">
@@ -23,11 +43,8 @@ export default function Navigation() {
         </div>
       </header>
       <div className="trends">
-        <h2>
-          Trending now
-        </h2>
+        <h2>Trending now</h2>
         <span>
-
           {' '}
           <BsGraphUp />
         </span>
@@ -73,7 +90,7 @@ export default function Navigation() {
             </div>
           </div>
           <div className="carousel-item">
-            <div className="card p-1 m-2">
+            <div key={2} className="card p-1 m-2">
               <div className="card-body d-flex flex-column align-items-start">
                 <div className="icon border d-flex ">
                   <h5 className="card-title">CASH</h5>
@@ -162,18 +179,19 @@ export default function Navigation() {
       </div>
 
       <div className="container">
-        <form className="p-1 my-3">
+        <form onSubmit={handleSearch} className="p-1 mx-2">
           <label htmlFor="search">
-            <input placeholder="company search" id="search" />
-            {' '}
-            <MdSearch />
-            {' '}
+            <input minLength="1" maxLength="7" onChange={onChangeHandler} className="p-2" placeholder="company search" id="search" />
+            <button type="submit" className="btn btn-primary search">
+              <MdSearch />
+            </button>
           </label>
         </form>
 
         {stockData.map((a) => {
           console.log(a);
           return (
+
             <NavLink
               to="/profile"
               state={{ from: 'Navigation', symbol: a.symbol }}
@@ -184,7 +202,6 @@ export default function Navigation() {
                 symbol={a.symbol}
                 img={generateIcon}
                 price={a.price}
-                indicator={a.beta}
               />
             </NavLink>
           );
