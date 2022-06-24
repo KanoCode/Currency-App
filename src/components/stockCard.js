@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const StockCard = (props) => {
   const {
-    img, symbol, price, name,
+    img, symbol, name, price,
   } = props;
 
   return (

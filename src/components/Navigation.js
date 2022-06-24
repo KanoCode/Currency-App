@@ -183,7 +183,7 @@ export default function Navigation() {
           </label>
         </form>
 
-        {stockData.map((a) => (
+        {stockData.map((a, i) => (
 
           <NavLink
             to="/profile"
@@ -194,7 +194,7 @@ export default function Navigation() {
               name={a.name}
               symbol={a.symbol}
               img={generateIcon}
-              price={123}
+              price={Math.floor(Math.random() * i * 13 + 123)}
             />
           </NavLink>
         ))}

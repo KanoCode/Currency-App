@@ -3,11 +3,9 @@
 > This is a javascript capstone proposed by microverse
 
 # Table of contents
-- [Stock Data app](#Overview)
-- [Table of contents](#table-of-contents)
 - [Overview](#overview)
   - [Built with](#built-with)
-  - [Live demo( IF AVAILABLE :blush: )](#live-demo-if-available--)
+  - [Live demo](#Live-demo)
   - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -23,9 +21,14 @@
 - CSS
 - Webpack
 - Jest
-## Live demo( IF AVAILABLE :blush: )
+## Live demo
+
+## Screenshots
+![](public/mobile-white.png)
+![](public/mobile-black.png)
 ## Getting Started
 > To get a local copy up and running follow these simple example steps.
+
 
 ### Prerequisites
 - Github Account
