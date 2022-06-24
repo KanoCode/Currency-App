@@ -22,7 +22,9 @@
 - Webpack
 - Jest
 ## Live demo
-[![](https://img.shields.io/badge/Deployed-Heroku-blueviolet)](https://deploy-preview-1--kanoz-accurate-stock-market-data-app.netlify.app/)
+[![](https://img.shields.io/badge/Deployed-Netlify-blueviolet)](https://deploy-preview-1--kanoz-accurate-stock-market-data-app.netlify.app/)
+## Video demo
+[see my demo here](https://www.loom.com/share/f75f9c0b5de04791abc4339c2a1b2ba3)
 ## Screenshots
 ![](public/mobile-white.png)
 ![](public/mobile-black.png)
