@@ -1,7 +1,7 @@
 import { API, ApiKey } from '../../components/Utils/API';
 import { FETCH_PROFILE } from './actionTypes';
 
-const fetchProfileAction = (chartArr, detailsArr) => ({
+export const fetchProfileAction = (chartArr, detailsArr) => ({
   type: FETCH_PROFILE,
   payload: {
     chartData: chartArr,

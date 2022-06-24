@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { BsGraphUp } from 'react-icons/bs';
 import { FaMicrophone } from 'react-icons/fa';
 import { IoMdSettings } from 'react-icons/io';
+import { v4 as uuidv4 } from 'uuid';
 import StockCard from './stockCard';
 import fetchStocksData from '../redux/actions/fetchActions';
 import searchData from '../redux/actions/search-action';
@@ -84,7 +85,7 @@ export default function Navigation() {
             </div>
           </div>
           <div className="carousel-item">
-            <div key={2} className="card p-1 m-2">
+            <div key={uuidv4()} className="card p-1 m-2">
               <div className="card-body d-flex flex-column align-items-start">
                 <div className="icon border d-flex ">
                   <h5 className="card-title">CASH</h5>
@@ -187,7 +188,7 @@ export default function Navigation() {
           <NavLink
             to="/profile"
             state={{ from: 'Navigation', symbol: a.symbol }}
-            key={1}
+            key={uuidv4()}
           >
             <StockCard
               name={a.name}
