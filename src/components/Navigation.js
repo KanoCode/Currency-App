@@ -9,26 +9,22 @@ import StockCard from './stockCard';
 import fetchStocksData from '../redux/actions/fetchActions';
 import searchData from '../redux/actions/search-action';
 import { imgUrlGenerator as generateIcon } from './Utils/API';
+// import fetchStocksData from '../redux/actions/fetchActions';
 
 export default function Navigation() {
-  const stockData = useSelector((state) => state.stocks);
   const [query, setQuery] = useState('');
-  const Dispatch = useDispatch();
 
-  generateIcon();
-  const handleSearch = (event) => {
-    event.preventDefault();
-    console.log(query);
-    Dispatch(searchData(query));
-  };
+  const stockData = useSelector((state) => state.stocks.data);
+  console.log(stockData);
+
+  const Dispatch = useDispatch();
   useEffect(() => {
     Dispatch(fetchStocksData());
-    if (stockData.length === 0) {
-      fetchStocksData();
-    }
-  },
-  []);
-
+  }, []);
+  const handleSearch = (event) => {
+    Dispatch(searchData(query));
+    event.preventDefault();
+  };
   const onChangeHandler = (event) => {
     setQuery(event.target.value);
   };
@@ -188,24 +184,21 @@ export default function Navigation() {
           </label>
         </form>
 
-        {stockData.map((a) => {
-          console.log(a);
-          return (
+        {stockData.map((a) => (
 
-            <NavLink
-              to="/profile"
-              state={{ from: 'Navigation', symbol: a.symbol }}
-              key={1}
-            >
-              <StockCard
-                name={a.name}
-                symbol={a.symbol}
-                img={generateIcon}
-                price={a.price}
-              />
-            </NavLink>
-          );
-        })}
+          <NavLink
+            to="/profile"
+            state={{ from: 'Navigation', symbol: a.symbol }}
+            key={1}
+          >
+            <StockCard
+              name={a.name}
+              symbol={a.symbol}
+              img={generateIcon}
+              price={123}
+            />
+          </NavLink>
+        ))}
       </div>
     </>
   );

@@ -1,7 +1,7 @@
-import { FETCH_PROFILE, FETCH_STOCKS, SEARCH_STOCKS } from '../actions/actionTypes';
+import { FETCH_STOCKS, SEARCH_STOCKS } from '../actions/actionTypes';
 
 const INITIAL_STATE = {
-  payload: [{
+  data: [{
     symbol: 'QCOM',
     companyName: 'QUALCOMM Incorporated',
     marketCap: 135508795392,
@@ -67,13 +67,11 @@ const INITIAL_STATE = {
 const StocksReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case FETCH_STOCKS:
-      return action.payload;
+      return { ...state, data: action.payload };
     case SEARCH_STOCKS:
-      return action.payload;
-    case FETCH_PROFILE:
-      return action.payload;
+      return { ...state, data: action.payload };
     default:
-      return state.payload;
+      return state;
   }
 };
 
