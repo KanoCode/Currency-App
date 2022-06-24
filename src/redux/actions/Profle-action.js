@@ -11,16 +11,14 @@ const fetchProfileAction = (chartArr, detailsArr) => ({
 
 const getProfileData = (symbol) => async (dispatch) => {
   const chartDataRequest = await fetch(
-    `https://api.twelvedata.com/time_series?symbol=${symbol}&interval=1day&outputsize=10&apikey=f09c17e6da8a48c7bed23e14658f6fff&source=docs`,
+    `https://financialmodelingprep.com/api/v3/historical-price-full/${symbol}?timeseries=10&apikey=${ApiKey}`,
   );
   const ProfileDataRequest = await fetch(
     `${API}${'profile/'}${symbol}?apikey=${ApiKey}`,
   );
   const chartData = await chartDataRequest.json();
   const ProfileData = await ProfileDataRequest.json();
-  const { values, meta } = chartData;
 
-  console.log(meta, values);
-  dispatch(fetchProfileAction(values, ProfileData));
+  dispatch(fetchProfileAction(chartData.historical, ProfileData));
 };
 export default getProfileData;

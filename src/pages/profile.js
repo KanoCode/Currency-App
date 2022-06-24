@@ -1,50 +1,20 @@
 import React, { useEffect } from 'react';
 import '../styles/Profile.css';
 import { useLocation, Link } from 'react-router-dom';
-import { FaHouseUser } from 'react-icons/fa';
+import { FaHouseUser, FaMicrophone } from 'react-icons/fa';
 import { useSelector, useDispatch } from 'react-redux';
+import { IoMdSettings } from 'react-icons/io';
 import LineChart from '../components/LineChart';
 import getProfileData from '../redux/actions/Profle-action';
+import getChartData from '../components/chartData';
 
-const getChartData = (arr) => ({
-  labels: arr.map((data) => data.datetime),
-  datasets: [
-    {
-      fill: true,
-      label: 'Open stock',
-      data: arr.map((data) => data.open),
-      backgroundColor: ['rgba(35,192,192,1)'],
-      borderColor: 'blue',
-      borderWidth: 3,
-    },
-    {
-      fill: true,
-      label: 'Volume per day',
-      data: arr.map((data) => data.volume),
-      borderColor: 'green',
-      backgroundColor: ['rgba(8,192,192,5)'],
-      borderWidth: 3,
-    },
-    {
-      fill: true,
-      label: 'stock close payday',
-      data: arr.map((data) => data.close),
-      backgroundColor: ['rgba(175,192,102,1)'],
-      borderColor: 'greenYellow',
-      borderWidth: 3,
-    },
-  ],
-
-});
-
-function Profile(props) {
+function Profile() {
   const location = useLocation();
   const { symbol } = location.state;
   const Dispatch = useDispatch();
   useEffect(() => {
     Dispatch(getProfileData(symbol));
   }, []);
-  console.log(props, symbol);
   const UserData = useSelector((state) => state.profile.chartData);
   const {
     price,
@@ -61,16 +31,19 @@ function Profile(props) {
     address,
   } = useSelector((state) => state.profile.profileData)[0];
   const Data = getChartData(UserData);
-  console.log(UserData[0]);
-
   return (
     <>
       <header className="App-header d-flex align-items-center">
+        <Link to="/"><h1><FaHouseUser /></h1></Link>
+        <div>
+          <FaMicrophone />
+          <IoMdSettings />
+        </div>
+      </header>
+      <header className="App-header d-flex align-items-center">
         <h1 id="profile-header">
           {' '}
-          <Link to="/">
-            <FaHouseUser />
-          </Link>
+          <Link to="/" />
         </h1>
       </header>
 

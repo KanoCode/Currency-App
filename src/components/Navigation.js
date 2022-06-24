@@ -9,13 +9,11 @@ import StockCard from './stockCard';
 import fetchStocksData from '../redux/actions/fetchActions';
 import searchData from '../redux/actions/search-action';
 import { imgUrlGenerator as generateIcon } from './Utils/API';
-// import fetchStocksData from '../redux/actions/fetchActions';
 
 export default function Navigation() {
   const [query, setQuery] = useState('');
 
   const stockData = useSelector((state) => state.stocks.data);
-  console.log(stockData);
 
   const Dispatch = useDispatch();
   useEffect(() => {
