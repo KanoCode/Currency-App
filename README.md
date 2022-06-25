@@ -23,6 +23,9 @@
 - Jest
 ## Live demo
 [![](https://img.shields.io/badge/Deployed-Netlify-blueviolet)](https://kanoz-accurate-stock-market-data-app.netlify.app)
+
+## Video demo
+[see my demo here](https://www.loom.com/share/f75f9c0b5de04791abc4339c2a1b2ba3)
 ## Screenshots
 ![](public/mobile-white.png)
 ![](public/mobile-black.png)
