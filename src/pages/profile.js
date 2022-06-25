@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import '../styles/Profile.css';
 import { useLocation, Link } from 'react-router-dom';
-import { FaHouseUser, FaMicrophone } from 'react-icons/fa';
+import { FaMicrophone } from 'react-icons/fa';
+import { MdArrowBackIos } from 'react-icons/md';
 import { useSelector, useDispatch } from 'react-redux';
 import { IoMdSettings } from 'react-icons/io';
 import LineChart from '../components/LineChart';
@@ -31,10 +32,20 @@ function Profile() {
     address,
   } = useSelector((state) => state.profile.profileData)[0];
   const Data = getChartData(UserData);
+  console.log(image);
   return (
     <>
       <header className="App-header d-flex align-items-center">
-        <Link to="/"><h1><FaHouseUser /></h1></Link>
+        <Link to="/">
+          <button type="button" className="btn btn-dark">
+            <MdArrowBackIos />
+            Back
+          </button>
+        </Link>
+        <h2>
+
+          Details
+        </h2>
         <div>
           <FaMicrophone />
           <IoMdSettings />
@@ -50,11 +61,7 @@ function Profile() {
       <div className="card p-1 m-2">
         <div className="card-body-top d-flex  align-items-start">
           <div className="icon-container p-3 d-flex ">
-            <img
-              className="rounded cpny-logo"
-              src={image}
-              alt="Card cap"
-            />
+            <img className="rounded cpny-logo" src={image} alt="Card cap" />
             <h5 className="card-title">{companyName}</h5>
           </div>
 
