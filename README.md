@@ -1,70 +1,102 @@
-# Getting Started with Create React App
+#Project: Stock Market Data
+# Stock market data
+> This is a javascript capstone proposed by microverse
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Table of contents
+- [Overview](#overview)
+  - [Built with](#built-with)
+  - [Live demo](#Live-demo)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+  - [Authors:](#authors)
+    - [:man: KanoCode](#-kanocode)
+    - [:handshake: Contributing](#-contributing)
+    - [Show your support](#show-your-support)
+    - [:memo: License](#-license)
+# Overview
+## Built with
+- Semantic HTML5 markup
+- Js
+- CSS
+- Webpack
+- Jest
+## Live demo
+[![](https://img.shields.io/badge/Deployed-Netlify-blueviolet)](https://kanoz-accurate-stock-market-data-app.netlify.app)
 
-## Available Scripts
+## Video demo
+[see my demo here](https://www.loom.com/share/f75f9c0b5de04791abc4339c2a1b2ba3)
+## Screenshots
+![](public/mobile-white.png)
+![](public/mobile-black.png)
+## Getting Started
+> To get a local copy up and running follow these simple example steps.
 
-In the project directory, you can run:
 
-### `npm start`
+### Prerequisites
+- Github Account
+- IDE
+- Git
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Setup
+- git init
+- git clone [ ](https://github.com/KanoCode/Kano-Tah-Movies.git)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Built with
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React js
+- Redux
+- Bootstrap
+- Chart.js
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To get a local copy up and running follow these simple example steps.
 
-### `npm run eject`
+## Setup
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Clone this repository. 
+- Navigate to the project folder (Library)
+- Run `npm install` command
+- Run `npm start` command
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Run Tests
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+npx eslint .
+```
+```
+npx stylelint "**/*.{css,scss}"
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Authors:
+￼ **Kanombola Kanombola**
 
-## Learn More
+[<code><img height="26" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"></code>](https://github.com/KanoCode)
+[<code><img height="26" src="https://upload.wikimedia.org/wikipedia/sco/thumb/9/9f/Twitter_bird_logo_2012.svg/1200px-Twitter_bird_logo_2012.svg.png"></code>](https://twitter.com/Kanombola_s)
+[<code><img height="26" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Linkedin.svg/1200px-Linkedin.svg.png"></code>](https://www.linkedin.com/in/kanombola-kanombola/)
+<a href="mailto:benshidanny11@gmail.com?subject=Hello Danny!"><img height="26" src="https://cdn.worldvectorlogo.com/logos/official-gmail-icon-2020-.svg"></a>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+##  Contributing
 
-### Code Splitting
+Contributions, issues and feature requests are welcome!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Feel free to check the [issues page](https://github.com/benshidanny11/space-travelers/issues).
 
-### Analyzing the Bundle Size
+## Show your support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Give a 👍 if you like this project!
 
-### Making a Progressive Web App
+## Acknowledgments
+- Original design idea by
+- [Nelson Sakwa on Behance](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs))
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Microverse
 
-### Advanced Configuration
+## 📝 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is [MIT](./LICENSE.md) licensed.

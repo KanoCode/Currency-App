@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  color: #fff;
+}
+
+header {
+  border-bottom: solid darkblue 1px;
+  color: #fff;
+  justify-content: space-between;
+}
+
+header > div {
+  width: 16%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.stock-card {
+  display: flex;
+  margin-top: 3%;
+  width: 290px;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(145deg, #d1d1d5, #f8f8fe);
+}
+
+.cpny-details {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 3%;
+}
+
+.stock-card h5 {
+  color: grey;
+  font-size: 15px;
+}
+
+.stock-card span {
+  color: red;
+  padding: 3px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto;
+  justify-items: center;
+}
+
+.stock-card img {
+  width: 30%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.card {
+  background-color: #d5e9e0;
+}
+
+.icon {
+  align-items: center;
+  justify-content: space-around;
+  width: 90%;
+}
+
+.cpny-logo {
+  display: block;
+  max-width: 20%;
+  height: auto;
+}
+
+.btn-links {
+  width: 70%;
+  justify-content: space-between;
+}
+
+.btn-one {
+  background-color: inherit;
+  color: inherit;
+}
+
+.trends {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.trends span {
+  color: #0c59ca;
+  display: block;
+  font-size: 23px;
+}
