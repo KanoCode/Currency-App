@@ -2,7 +2,7 @@
 
 exports[`renders learn react link 1`] = `
 Array [
-  "    ",
+  " ",
   <div
     className="App"
   >
@@ -464,134 +464,6 @@ Array [
           </button>
         </label>
       </form>
-      <a
-        className=""
-        href="/profile"
-        onClick={[Function]}
-      >
-        <div
-          className="stock-card p-2 rounded"
-        >
-          <img
-            alt=""
-            src="https://financialmodelingprep.com/image-stock/QCOM.png"
-          />
-          <div
-            className="cpny-details"
-          >
-             
-            <h4>
-              QCOM
-            </h4>
-            <h5 />
-          </div>
-          <div
-            className="price-data"
-          >
-             
-            <p>
-              $
-              123
-            </p>
-          </div>
-        </div>
-      </a>
-      <a
-        className=""
-        href="/profile"
-        onClick={[Function]}
-      >
-        <div
-          className="stock-card p-2 rounded"
-        >
-          <img
-            alt=""
-            src="https://financialmodelingprep.com/image-stock/UNP.png"
-          />
-          <div
-            className="cpny-details"
-          >
-             
-            <h4>
-              UNP
-            </h4>
-            <h5 />
-          </div>
-          <div
-            className="price-data"
-          >
-             
-            <p>
-              $
-              123
-            </p>
-          </div>
-        </div>
-      </a>
-      <a
-        className=""
-        href="/profile"
-        onClick={[Function]}
-      >
-        <div
-          className="stock-card p-2 rounded"
-        >
-          <img
-            alt=""
-            src="https://financialmodelingprep.com/image-stock/AMGN.png"
-          />
-          <div
-            className="cpny-details"
-          >
-             
-            <h4>
-              AMGN
-            </h4>
-            <h5 />
-          </div>
-          <div
-            className="price-data"
-          >
-             
-            <p>
-              $
-              123
-            </p>
-          </div>
-        </div>
-      </a>
-      <a
-        className=""
-        href="/profile"
-        onClick={[Function]}
-      >
-        <div
-          className="stock-card p-2 rounded"
-        >
-          <img
-            alt=""
-            src="https://financialmodelingprep.com/image-stock/HON.png"
-          />
-          <div
-            className="cpny-details"
-          >
-             
-            <h4>
-              HON
-            </h4>
-            <h5 />
-          </div>
-          <div
-            className="price-data"
-          >
-             
-            <p>
-              $
-              123
-            </p>
-          </div>
-        </div>
-      </a>
     </div>
   </div>,
 ]
