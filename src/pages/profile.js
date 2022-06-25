@@ -32,7 +32,6 @@ function Profile() {
     address,
   } = useSelector((state) => state.profile.profileData)[0];
   const Data = getChartData(UserData);
-  console.log(image);
   return (
     <>
       <header className="App-header d-flex align-items-center">
