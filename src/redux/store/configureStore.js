@@ -1,16 +1,20 @@
-import { combineReducers, createStore, applyMiddleware } from 'redux';
+import { combineReducers } from 'redux';
 import logger from 'redux-logger';
+import { configureStore } from '@reduxjs/toolkit';
 import thunk from 'redux-thunk';
 import StocksReducer from '../reducers/stocksList';
 import ProfileReducer from '../reducers/ProfilesReducer';
 import SearchReducer from '../reducers/searchStock';
 
-const reducers = combineReducers({
+const rootReducer = combineReducers({
   profile: ProfileReducer,
   searchedData: SearchReducer,
   stocks: StocksReducer,
 });
 
-const store = createStore(reducers, applyMiddleware(thunk, logger));
+const store = configureStore({
+  reducer: rootReducer,
+  middleware: [thunk, logger],
+});
 
 export default store;
