@@ -28,7 +28,7 @@ export default function Navigation() {
     setQuery(event.target.value);
   };
   return (
-    <>
+    <div className="p-3">
       <header className="App-header d-flex align-items-center">
         <h1>Stock data</h1>
         <div>
@@ -46,7 +46,7 @@ export default function Navigation() {
       </div>
       <div
         id="carouselExampleControls"
-        className="carousel slide"
+        className="carousel slide container"
         data-bs-ride="carousel"
       >
         <div className="carousel-inner">
@@ -176,7 +176,7 @@ export default function Navigation() {
       <div className="container">
         <form onSubmit={handleSearch} className="p-1 mx-2">
           <label htmlFor="search">
-            <input minLength="1" maxLength="7" onChange={onChangeHandler} className="p-2" placeholder="company search" id="search" />
+            <input minLength="1" maxLength="7" onChange={onChangeHandler} className="p-1" placeholder="company search" id="search" />
             <button type="submit" className="btn btn-primary search">
               <MdSearch />
             </button>
@@ -199,6 +199,6 @@ export default function Navigation() {
           </NavLink>
         ))}
       </div>
-    </>
+    </div>
   );
 }
